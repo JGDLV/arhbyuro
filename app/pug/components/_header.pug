@@ -1,0 +1,88 @@
+-
+  var clearPhone = function(x) {
+    return x.replace(/\D/g, '');
+  }
+
+  var header = {
+    logo: 'img/logo.svg',
+    tagline: 'Архитектура, проектирование. Дизайн интерьеров',
+    phone: '+7 (495) 128 46-41',
+    whours: '9:00 – 20:00 без выходных',
+    social: [
+      { href: '#', class: 'viber', image: 'img/viber.svg' },
+      { href: '#', class: 'telegram', image: 'img/telegram.svg' },
+      { href: '#', class: 'whatsapp', image: 'img/whatsapp.svg' },
+      { href: 'mailto:designs-project@ya.ru', class: 'email', image: 'img/email.svg' },
+    ],
+    button: { href: '#callback', text: 'Обратный звонок' }
+  }
+
+  var menu = [
+    { href: '#services', text: 'Услуги' },
+    { href: '#about', text: 'О бюро' },
+    { href: '#price', text: 'Цены' },
+    { href: '#benefits', text: 'Преимущества' },
+    { href: '#portfolio', text: 'Портфолио' },
+    { href: '#footer', text: 'Контакты' },
+  ]
+
+header.header
+  .header__top
+    .container
+      .header__top-inner.flex.aic
+        .logo
+          img.logo__image(src=header.logo, alt="")
+        .tagline !{header.tagline}
+        .contacts
+          a.contacts__phone(href="tel:+" + clearPhone(header.phone)) !{header.phone}
+          p.contacts__whours !{header.whours}
+          a.header__button.mobile(href=header.button.href) !{header.button.text}
+        .social.flex
+          each item in header.social
+            a.social__item(href=item.href class='social__item_' + item.class)
+              img.social__image(src=item.image, alt="")
+        .menu-toggle
+          i.icon-toggle
+            span
+            span
+            span
+  .header__bottom
+    .container
+      .header__bottom-inner.flex
+        .menu
+          ul.menu-items.flex
+            each item in menu
+              li.menu__item
+                a.menu__link.goto(href=item.href) !{item.text}
+        a.header__button(href=header.button.href) !{header.button.text}
+
+      include intro.pug
+
+.header_fixed
+  .container
+    .header_fixed__inner.flex.aic
+      .logo
+        img.logo__image(src=header.logo, alt="")  
+      .menu
+        ul.menu-items.flex
+          each item in menu
+            li.menu__item
+              a.menu__link.goto(href=item.href) !{item.text}
+      .contacts
+        a.contacts__phone(href="tel:+" + clearPhone(header.phone)) !{header.phone}
+        a.header__button(href=header.button.href) !{header.button.text}
+      .social.flex
+        each item in header.social
+          a.social__item(href=item.href class='social__item_' + item.class)
+            img.social__image(src=item.image, alt="")
+      .menu-toggle
+        i.icon-toggle
+          span
+          span
+          span
+
+//- .menu.menu-mobile
+//-   ul.menu-items.flex
+//-     each item in menu
+//-       li.menu__item
+//-         a.menu__link.goto(href=item.href) !{item.text}

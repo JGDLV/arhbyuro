@@ -1,0 +1,61 @@
+-
+  var price = {
+    header: 'Стоимость проектных работ: архитектура и дизайн',
+    items: [
+      {
+        title: 'Архитектурное проектирование',
+        price: 'От 1000 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Дизайн интерьера',
+        price: 'От 2000 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Обмерные работы',
+        price: 'Бесплатно',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Конструктивные решения',
+        price: 'От 2500 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Ландшафтная архитектура',
+        price: 'От 40 000 ₽/сотка',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Проект на наружную отделку',
+        price: 'От 2000 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Строительство',
+        price: 'От 45 000 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Авторский надзор',
+        price: 'от 5% от стоимости строительства',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        title: 'Проектирование инженерных сетей',
+        price: 'От 1000 ₽/м2',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+    ],
+  }
+
+.price#price
+  .container
+    h2.price__header !{price.header}
+    .price-items
+      each item in price.items
+        .price__item
+          p.price__item-title !{item.title}
+          p.price__item-price !{item.price}
+          a.price__item-button.btn.btn_stroke(href=item.button.href) !{item.button.text}

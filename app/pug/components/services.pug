@@ -1,0 +1,88 @@
+-
+  var services = {
+    header: 'Услуги архитектурного бюро',
+    items: [
+      {
+        image: 'img/services-01.jpg',
+        title: 'Архитектурное проектирование частных загородных домов и коттеджей',
+        text: 'С учетом потребностей и вкуса хозяев',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-02.jpg',
+        title: 'Дизайн интерьеров',
+        text: 'Поможем создать пространство, в котором приятно находиться',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-03.jpg',
+        title: 'Проектирование жилых и общественных зданий',
+        text: 'Предложим решение с учетом поставленных задач',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-04.jpg',
+        title: 'Ландшафтный дизайн',
+        text: 'Облагораживание частного участка или общественных территорий',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-05.jpg',
+        title: 'Внешняя отделка домов, фасадный декор',
+        text: 'Стильные, долговечные и практичные решения',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-06.jpg',
+        title: 'Проектирование инженерных систем и оборудования',
+        text: 'С соблюдением всех актуальных стандартов',
+      button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-07.jpg',
+        title: 'Архитектурная подсветка',
+        text: 'Уникальный дизайнерский инструмент повысит узнаваемость',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-08.jpg',
+        title: 'Реконструкция и перепланировка зданий',
+        text: 'Усилим конструкции и увеличим полезную площадь',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-09.jpg',
+        title: 'Авторский надзор',
+        text: 'Специалист архитектурного бюро проконтролирует строительство',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-10.jpg',
+        title: 'Комплектация мебелью и декором, отделкой',
+        text: 'Предоставим все необходимое для преображения пространства',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-11.jpg',
+        title: 'Ремонт',
+        text: 'Весь комплекс работ – от демонтажа до отделки',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+      {
+        image: 'img/services-12.jpg',
+        title: 'Строительство домов',
+        text: 'Индивидуальный проект без типовых решений',
+        button: { href: '#callback', text: 'Узнать стоимость' }
+      },
+    ],
+  }
+
+.services#services
+  .container
+    h2.services__header !{services.header}
+    .services-items
+      each item in services.items
+        .services__item(style="background-image:url(" + item.image + ");")
+          p.services__item-title !{item.title}
+          p.services__item-text !{item.text}
+          a.services__item-button.btn.btn_stroke(href=item.button.href) !{item.button.text}

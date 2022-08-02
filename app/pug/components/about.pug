@@ -1,0 +1,40 @@
+-
+  var about = {
+    header: 'Об архитектурном бюро ГлобАрх',
+    items: [
+      {
+        header: 'Философия',
+        text: 'Эстетичность, практичность, удобство – основные принципы при проведении проектных работ. Каждая деталь выполняет свою функцию, чтобы пространство было комфортным.'
+      },
+      {
+        header: 'Подход к работе',
+        text: 'Продумываем нестандартные решения и учитываем потребности заказчика, поэтому каждый проект архитектурного бюро не похож на остальные и полностью отвечает целям.'
+      },
+      {
+        header: 'Команда',
+        text: 'Специалисты архитектурного бюро решат даже сложные нестандартные задачи, все благодаря опыту и слаженной работе сотрудников. Выполняем проекты разных масштабов.'
+      },
+    ],
+    items2: [
+      { header: '700+', text: 'уникальных проектов' },
+      { header: '5 лет', text: 'опыт работы' },
+      { header: '237 000 м<sup>2</sup>', text: 'объем выполненных проектов архитектуры и дизайна' },
+    ]
+  }
+
+.about#about
+  .container
+    .about__inner.flex
+      .about__left
+        h2.about__header !{about.header}
+        .about-items
+          each item in about.items
+            .about__item
+              p.about__item-header !{item.header}
+              p.about__item-text !{item.text}
+      .about__right
+        .about-benefits
+          each item in about.items2
+            .about__benefit
+              p.about__benefit-header !{item.header}
+              p.about__benefit-text !{item.text}

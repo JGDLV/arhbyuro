@@ -1,0 +1,24 @@
+footer.footer#footer
+  .footer__top
+    .container
+      .footer__top-inner.flex.aic
+        .logo
+          img.logo__image(src=header.logo, alt="")
+        .tagline !{header.tagline}
+        .contacts
+          a.contacts__phone(href="tel:+" + clearPhone(header.phone)) !{header.phone}
+          p.contacts__whours !{header.whours}
+        .social.flex
+          each item in header.social
+            a.social__item(href=item.href class='social__item_' + item.class)
+              img.social__image(src=item.image, alt="")
+  .footer__bottom
+    .container
+      .footer__bottom-inner.flex
+        .copyright © 2022 «Архитектурное бюро ГлобАрх»
+        .policy
+          a.footer__link(href="#")  Политика конфиденциальности
+        .address
+          a.footer__address(href="#") 21087, г. Москва, Барклая улица, д.6с5
+        .developer
+          a.footer__link(href="https://1ps.ru" target="_blank") 1PS.RU

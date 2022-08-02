@@ -1,0 +1,11 @@
+.modal.mfp-hide#callback
+	form.modal-form
+		p.modal-form__header Отправить заявку
+		p.modal-form__text Оставьте заявку и специалисты свяжутся с вами в течение рабочего дня
+		input(type="hidden", name="act" value="callback")
+		input.form__input(type="text" name="name" placeholder="Имя")
+		input.form__input(type="text" name="phone" placeholder="+7 (___) ___-__-__" reqiured)
+		label.form__label.form__label_privacy
+			input(type="checkbox" required)
+			| Разрешаю обработку #[a(href="#") персональных данных]
+		button.form__button.btn(type="submit") Получить расчет

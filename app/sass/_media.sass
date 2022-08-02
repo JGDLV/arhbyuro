@@ -1,0 +1,360 @@
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1210px
+
+@media (max-width: 1200px)
+  .contacts__whours
+    display: none
+  .mobile
+    display: block
+  .menu-toggle
+    display: flex
+    background: #FFCF25
+    margin: 0 0 0 10px
+  .header
+    .contacts
+      text-align: right
+    &__button
+      padding-left: 0
+      font-size: 14px
+      line-height: 18px
+      margin-top: -5px
+      &::before
+        content: none
+    &__top
+      background: #232429
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      &-inner
+        border: 0
+        padding: 10px 0
+    &__bottom
+      &-inner
+        .header__button
+          display: none
+        .menu
+          background: #232429
+          position: fixed
+          top: -100%
+          left: 0
+          right: 0
+          z-index: 20
+          opacity: 0
+          +tr
+          &.active
+            top: 60px
+            opacity: 1
+          &-items
+            display: block
+          &__item
+            margin: 0
+            &:first-child
+              a
+                border-top: 1px solid rgba(#FFCF25, .25)
+          &__link
+            display: block
+            padding: 10px 15px
+            border-bottom: 1px solid rgba(#FFCF25, .25)
+
+    .logo
+      &__image
+        width: 200px
+  .header
+    &_fixed
+      display: none !important
+  .intro
+    padding: 20px 0 30px
+  .services
+    padding: 40px 0
+    &__item
+      padding: 25px
+      &:hover
+        .services__item-button
+          bottom: 25px
+      &-title
+        font-size: 20px
+        line-height: normal
+      &-button
+        left: 25px
+        right: 25px
+  .about
+    &__inner
+      padding: 30px
+    &__left
+      width: 100%
+      margin-bottom: 30px
+    &__right
+      width: 100%
+      padding-left: 0
+  .price
+    padding: 40px 0
+  .benefits
+    padding: 40px 0
+  .scheme
+    padding: 0 0 40px
+  .portfolio
+    padding: 0 0 40px
+  .content
+    padding-bottom: 40px
+  .footer
+    .logo
+      width: 200px
+    &__bottom
+      &-inner
+        padding: 10px 0 15px
+        justify-content: space-between
+        & > *
+          margin: 0
+
+@media (max-width: 992px)
+  // .menu-toggle
+  //   display: flex
+  //   background: #FFCF25
+  //   margin: 0 0 0 10px
+  // .header
+  //   &__top
+  //     background: #232429
+  //     position: fixed
+  //     left: 0
+  //     top: 0
+  //     right: 0
+  //     &-inner
+  //       border: 0
+  //       padding: 10px 0
+  //   &__bottom
+  //     &-inner
+  //       .header__button
+  //         display: none
+  //       .menu
+  //         background: #232429
+  //         position: fixed
+  //         top: -100px
+  //         left: 0
+  //         right: 0
+  //         z-index: 20
+  //         opacity: 0
+  //         +tr
+  //         &.active
+  //           top: 60px
+  //           opacity: 1
+  //         &-items
+  //           display: block
+  //         &__item
+  //           margin: 0
+  //           &:last-child
+  //             a
+  //               border-bottom: 0
+  //         &__link
+  //           display: block
+  //           padding: 10px 15px
+  //           border-bottom: 1px solid rgba(#FFCF25, .25)
+
+  //   .logo
+  //     &__image
+  //       width: 200px
+  //   &_fixed
+  //     display: none !important
+  //     .menu
+  //       display: none
+  //     .contacts
+  //       &__phone
+  //         margin-top: 3px
+  //     .menu-toggle
+  //       width: 32px
+  //       height: 32px
+  //       .icon-toggle
+  //         height: 13px
+  //       span
+  //         width: 80%
+  //         left: 2px
+  .tagline
+    display: none
+  .social
+    margin-left: auto
+  .intro
+    &__text
+      margin-bottom: 50px
+  .services
+    &-items
+      grid-template-columns: repeat(2, 1fr)
+  .price
+    &-items
+      grid-template-columns: repeat(2, 1fr)
+  .benefits
+    &-items
+      grid-gap: 30px
+      grid-template-columns: repeat(2, 1fr)
+  .footer
+    &__top
+      &-inner
+        justify-content: space-between
+    .tagline
+      display: none
+    &__bottom
+      &-inner
+        & > *
+          width: 100%
+          text-align: center
+          margin: 5px 0 !important
+  .copyright
+    width: 100%
+    text-align: center
+    margin-bottom: 10px
+
+@media (max-width: 768px)
+  .header
+    &__top
+      &-inner
+        padding: 10px 0
+    .social
+      display: none
+    .contacts
+      margin-left: auto
+    &_fixed
+      .contacts
+        &__phone
+          font-size: 15px
+          margin-bottom: 0
+  h1, h2
+    font-size: 30px !important
+    line-height: normal !important
+  .form
+    padding: 20px
+    &__inner
+      grid-template-columns: 1fr
+      grid-gap: 20px
+    &__header
+      font-size: 24px
+      line-height: normal
+  .services
+    &-items
+      grid-template-columns: 1fr
+  .about__benefit-header
+    font-size: 48px
+  .scheme
+    &-items
+      &::before
+        content: none
+    &__item
+      width: 100%
+      margin-bottom: 30px
+      &::before, &::after
+        content: none
+      &:last-child
+        margin-bottom: 0
+  .footer
+    .logo
+      width: 100%
+      text-align: center
+      &__image
+        width: 200px
+    &__top
+      &-inner
+        justify-content: center
+        padding: 15px 0
+        & > *
+          margin: 10px 0 !important
+    .social
+      width: 100%
+      justify-content: center
+
+@media (max-width: 576px)
+  .header__button
+    display: none
+  h1, h2
+    font-size: 22px !important
+  .about__benefit-header
+    font-size: 30px
+  .price
+    &-items
+      grid-template-columns: 1fr
+  .benefits
+    &-items
+      grid-template-columns: 1fr
+  .form
+    &__header
+      font-size: 20px
+    &__input
+      height: 40px
+    &__button
+      height: 40px
+  .modal
+    padding: 30px
+  .header
+    .menu-toggle
+      width: 36px
+      height: 36px
+    .logo
+      &__image
+        width: 170px
+    .contacts
+      &__phone
+        font-size: 0
+        width: 36px
+        height: 36px
+        display: block
+        border-radius: 50%
+        background: #FFCF25 url('../img/phone-black.svg') no-repeat center
+      &__whours
+        display: none
+    &_fixed
+      .social
+        display: none
+      .header__button
+        display: none
+      .contacts
+        &__phone
+          font-size: 0
+          width: 32px
+          height: 32px
+          display: block
+          border-radius: 50%
+          background: #FFCF25 url('../img/phone-black.svg') no-repeat center
+          background-size: 16px
+  .portfolio__map
+    height: 400px
+
+@media (max-width: 400px)
+  .services
+    &-items
+      display: flex
+      overflow: auto
+      padding-bottom: 20px
+    &__item
+      min-width: 90%
+  .price
+    &-items
+      display: flex
+      overflow: auto
+      padding-bottom: 20px
+    &__item
+      min-width: 90%
+  .benefits
+    &-items
+      display: flex
+      overflow: auto
+      padding-bottom: 20px
+    &__item
+      min-width: 90%
+  .scheme
+    &-items
+      display: flex
+      overflow: auto
+      padding-bottom: 20px
+      grid-gap: 20px
+    &__item
+      min-width: 90%
